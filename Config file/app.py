@@ -52,10 +52,7 @@ configdata = {
                 }
             }
 
-configdata_json = json.dumps(configdata)
-print(type(configdata))
-print(configdata_json)
-print(type(configdata_json))
+
 
 @app.route("/adddate",methods = ['POST'])
 def adddata():
