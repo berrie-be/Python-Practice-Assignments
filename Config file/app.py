@@ -18,11 +18,10 @@ col = db.configdata
 #config parser object
 config = configparser.ConfigParser()
 
-try:
-    config.read('config.ini')
-except configparser.Error as e:
-    print(f"Error reading config file: {e}")
-    exit()
+read = config.read('config.ini')
+if not read:
+    raise Exception("no such file found")
+
 
 
 db_host = config['DATABASE']['host']
