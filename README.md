@@ -3,7 +3,7 @@ This assignment includes answers to below questions.
 
 I have used Flask to solve of the problems.
 
-## Q1. 
+## Q1. (passwordchecker.py)
 In DevOps, security is a crucial aspect, and ensuring strong passwords is essential. Create a Python script to check the strength of the password. 
 ●       Implement a Python function called check_password_strength that takes a password string as input.
 ●       The function should check the password against the following criteria:
@@ -16,7 +16,7 @@ In DevOps, security is a crucial aspect, and ensuring strong passwords is essent
 ●       Provide appropriate feedback to the user based on the strength of the password.  
 
 
-## Q2. 
+## Q2. (cpuusage.py)
 As a DevOps engineer, it is crucial to monitor the health and performance of servers. Write a Python program to monitor the health of the CPU. Few pointers to be noted:
 ●       The program should continuously monitor the CPU usage of the local machine.
 ●       If the CPU usage exceeds a predefined threshold (e.g., 80%), an alert message should be displayed.
@@ -34,7 +34,7 @@ Alert! CPU usage exceeds threshold: 90%
 ... (continues until interrupted) 
 
 
-## Q3. 
+## Q3. (FolderName - Config File)
 In DevOps, automating configuration management tasks is essential for maintaining consistency and managing infrastructure efficiently.
 ●       The program should read a configuration file (you can provide them with a sample configuration file).
 ●       It should extract specific key-value pairs from the configuration file.
@@ -68,7 +68,8 @@ Server:
 - address: 192.168.0.1
 - port: 8080 
 
-Q4. In DevOps, performing regular backups of important files is crucial:
+## Q4. (FolderName - Backup) 
+In DevOps, performing regular backups of important files is crucial:
 ●       Implement a Python script called backup.py that takes a source directory and a destination directory as command-line arguments.
 ●       The script should copy all files from the source directory to the destination directory.
 ●       Before copying, check if the destination directory already contains a file with the same name. If so, append a timestamp to the file name to ensure uniqueness.
