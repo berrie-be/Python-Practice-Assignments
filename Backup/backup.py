@@ -1,4 +1,5 @@
 import sys, os
+from datetime import datetime
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -22,10 +23,19 @@ else:
         full_src_path = os.path.join(folder_path, entry)
         if os.path.isfile(full_src_path):
             full_dest_path = os.path.join(des_dir,entry)
-            with open(full_src_path, 'r') as f:
+            with open(full_src_path, 'rb') as f:
                 content = f.read()
-                with open(full_dest_path, 'w') as file:
-                    file.write(content)
+                if os.path.exists(full_dest_path):
+                    path, extension = os.path.splitext(full_dest_path)
+                    print(path, extension)
+                    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+                    new_dest_path = path + "_"+timestamp + extension
+                    print(new_dest_path)
+                    with open(new_dest_path, 'wb') as file:
+                        file.write(content)   
+                else:
+                    with open(full_dest_path, 'wb') as file:
+                        file.write(content)
         else:
             continue
 
